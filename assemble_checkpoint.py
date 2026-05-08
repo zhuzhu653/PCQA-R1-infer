@@ -73,7 +73,7 @@ def main() -> int:
     parser.add_argument(
         "--sha256-file",
         type=Path,
-        default=Path(__file__).resolve().parent / "CHECKPOINT_210_SHA256SUMS.txt",
+        default=Path(__file__).resolve().parent / "CHECKPOINT_210_SHA256SUMS_1GB.txt",
         help="Optional SHA256 manifest to verify part files before assembly",
     )
     parser.add_argument(
