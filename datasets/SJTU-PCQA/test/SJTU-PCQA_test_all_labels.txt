@@ -1,0 +1,379 @@
+name	normalized_mos	original_mos
+hhi_0.ply	4.8725	9.5167
+hhi_1.ply	4.0515	7.7109
+hhi_10.ply	2.7317	4.8083
+hhi_11.ply	2.8284	5.0212
+hhi_12.ply	4.5201	8.7417
+hhi_13.ply	3.5166	6.5346
+hhi_14.ply	3.7353	7.0156
+hhi_15.ply	2.7868	4.9297
+hhi_16.ply	2.3896	4.0561
+hhi_17.ply	1.3573	1.7857
+hhi_18.ply	4.2913	8.2385
+hhi_19.ply	3.9097	7.3992
+hhi_2.ply	4.6127	8.9453
+hhi_20.ply	2.8264	5.0167
+hhi_21.ply	2.5043	4.3083
+hhi_22.ply	1.6572	2.4453
+hhi_23.ply	1.4119	1.9058
+hhi_24.ply	4.0377	7.6808
+hhi_25.ply	3.4402	6.3667
+hhi_26.ply	2.6199	4.5625
+hhi_27.ply	1.5494	2.2083
+hhi_28.ply	1.2457	1.5404
+hhi_29.ply	1.0000	1.0000
+hhi_3.ply	3.8970	7.3712
+hhi_30.ply	4.8487	9.4643
+hhi_31.ply	4.3250	8.3125
+hhi_32.ply	3.6540	6.8367
+hhi_33.ply	2.1254	3.4750
+hhi_34.ply	1.3944	1.8673
+hhi_35.ply	1.0888	1.1953
+hhi_36.ply	4.2826	8.2192
+hhi_37.ply	3.2018	5.8423
+hhi_38.ply	2.7828	4.9209
+hhi_39.ply	1.6785	2.4922
+hhi_4.ply	2.4475	4.1833
+hhi_40.ply	1.4926	2.0833
+hhi_41.ply	1.2274	1.5000
+hhi_5.ply	1.4334	1.9531
+hhi_6.ply	4.9999	9.7969
+hhi_7.ply	3.6268	6.7769
+hhi_8.ply	3.3225	6.1077
+hhi_9.ply	3.3374	6.1406
+longdress_0.ply	4.4108	8.5013
+longdress_1.ply	3.3461	6.1596
+longdress_10.ply	2.7762	4.9062
+longdress_11.ply	2.4058	4.0917
+longdress_12.ply	4.2564	8.1615
+longdress_13.ply	4.3563	8.3814
+longdress_14.ply	4.0669	7.7449
+longdress_15.ply	3.1634	5.7578
+longdress_16.ply	2.5559	4.4219
+longdress_17.ply	1.5124	2.1269
+longdress_18.ply	4.7158	9.1719
+longdress_19.ply	3.6297	6.7833
+longdress_2.ply	3.4120	6.3047
+longdress_20.ply	3.2051	5.8495
+longdress_21.ply	2.4262	4.1365
+longdress_22.ply	2.1930	3.6237
+longdress_23.ply	1.3594	1.7904
+longdress_24.ply	4.1071	7.8333
+longdress_25.ply	3.5647	6.6404
+longdress_26.ply	2.8946	5.1667
+longdress_27.ply	1.9966	3.1917
+longdress_28.ply	1.2025	1.4453
+longdress_29.ply	1.0341	1.0750
+longdress_3.ply	3.0497	5.5078
+longdress_30.ply	3.8911	7.3583
+longdress_31.ply	3.7218	6.9860
+longdress_32.ply	2.6142	4.5500
+longdress_33.ply	1.6892	2.5156
+longdress_34.ply	1.4489	1.9872
+longdress_35.ply	1.2042	1.4490
+longdress_36.ply	4.3307	8.3250
+longdress_37.ply	3.2773	6.0083
+longdress_38.ply	2.7392	4.8250
+longdress_39.ply	1.6051	2.3308
+longdress_4.ply	3.7816	7.1173
+longdress_40.ply	1.3562	1.7833
+longdress_41.ply	1.1970	1.4333
+longdress_5.ply	2.0941	3.4062
+longdress_6.ply	4.9480	9.6827
+longdress_7.ply	3.9678	7.5269
+longdress_8.ply	3.5962	6.7096
+longdress_9.ply	2.7857	4.9273
+loot_0.ply	3.7265	6.9962
+loot_1.ply	3.7673	7.0859
+loot_10.ply	2.4691	4.2309
+loot_11.ply	2.3925	4.0625
+loot_12.ply	4.3044	8.2673
+loot_13.ply	4.4619	8.6135
+loot_14.ply	4.0356	7.6760
+loot_15.ply	3.1740	5.7812
+loot_16.ply	1.8980	2.9750
+loot_17.ply	1.3865	1.8500
+loot_18.ply	4.2651	8.1808
+loot_19.ply	3.6941	6.9250
+loot_2.ply	2.9931	5.3833
+loot_20.ply	2.7279	4.8000
+loot_21.ply	2.5004	4.2997
+loot_22.ply	1.5835	2.2833
+loot_23.ply	1.1014	1.2231
+loot_24.ply	3.8148	7.1904
+loot_25.ply	3.8561	7.2812
+loot_26.ply	2.4399	4.1667
+loot_27.ply	1.6261	2.3769
+loot_28.ply	1.3200	1.7038
+loot_29.ply	1.0000	1.0000
+loot_3.ply	2.9135	5.2083
+loot_30.ply	3.8836	7.3417
+loot_31.ply	4.0762	7.7653
+loot_32.ply	2.7165	4.7750
+loot_33.ply	1.8298	2.8250
+loot_34.ply	1.6786	2.4923
+loot_35.ply	1.1014	1.2231
+loot_36.ply	4.3394	8.3442
+loot_37.ply	3.5918	6.7000
+loot_38.ply	2.4778	4.2500
+loot_39.ply	1.7995	2.7583
+loot_4.ply	3.5826	6.6798
+loot_40.ply	1.4250	1.9346
+loot_41.ply	1.0909	1.2000
+loot_5.ply	1.7768	2.7083
+loot_6.ply	4.9332	9.6500
+loot_7.ply	3.8722	7.3167
+loot_8.ply	2.9992	5.3967
+loot_9.ply	2.6299	4.5846
+redandblack_0.ply	4.2589	8.1671
+redandblack_1.ply	3.4781	6.4500
+redandblack_10.ply	3.0533	5.5156
+redandblack_11.ply	2.7191	4.7808
+redandblack_12.ply	4.0771	7.7673
+redandblack_13.ply	3.6390	6.8038
+redandblack_14.ply	3.5691	6.6500
+redandblack_15.ply	2.8934	5.1641
+redandblack_16.ply	2.2321	3.7096
+redandblack_17.ply	1.5191	2.1417
+redandblack_18.ply	4.2701	8.1917
+redandblack_19.ply	3.6600	6.8500
+redandblack_2.ply	3.6074	6.7344
+redandblack_20.ply	3.3390	6.1441
+redandblack_21.ply	2.6589	4.6484
+redandblack_22.ply	2.1210	3.4654
+redandblack_23.ply	1.1970	1.4333
+redandblack_24.ply	4.3001	8.2578
+redandblack_25.ply	3.8881	7.3516
+redandblack_26.ply	3.0821	5.5791
+redandblack_27.ply	1.6536	2.4375
+redandblack_28.ply	1.5797	2.2750
+redandblack_29.ply	1.0000	1.0000
+redandblack_3.ply	2.7733	4.9000
+redandblack_30.ply	4.2397	8.1250
+redandblack_31.ply	3.4743	6.4417
+redandblack_32.ply	3.2557	5.9609
+redandblack_33.ply	2.0886	3.3941
+redandblack_34.ply	1.3941	1.8667
+redandblack_35.ply	1.3856	1.8481
+redandblack_36.ply	4.4216	8.5250
+redandblack_37.ply	3.3024	6.0635
+redandblack_38.ply	3.2593	5.9688
+redandblack_39.ply	1.9662	3.1250
+redandblack_4.ply	3.4040	6.2870
+redandblack_40.ply	1.3987	1.8769
+redandblack_41.ply	1.3145	1.6917
+redandblack_5.ply	2.2540	3.7578
+redandblack_6.ply	4.8162	9.3929
+redandblack_7.ply	4.0048	7.6083
+redandblack_8.ply	3.8407	7.2474
+redandblack_9.ply	3.5151	6.5312
+soldier_0.ply	4.3285	8.3203
+soldier_1.ply	3.1750	5.7833
+soldier_10.ply	2.5990	4.5167
+soldier_11.ply	2.3229	3.9094
+soldier_12.ply	4.0080	7.6154
+soldier_13.ply	4.4209	8.5234
+soldier_14.ply	4.0414	7.6888
+soldier_15.ply	3.1021	5.6231
+soldier_16.ply	2.4174	4.1172
+soldier_17.ply	1.4250	1.9346
+soldier_18.ply	4.7188	9.1786
+soldier_19.ply	4.2433	8.1328
+soldier_2.ply	3.1974	5.8327
+soldier_20.ply	3.1669	5.7656
+soldier_21.ply	2.5748	4.4635
+soldier_22.ply	1.9840	3.1641
+soldier_23.ply	1.2236	1.4917
+soldier_24.ply	4.0995	7.8167
+soldier_25.ply	3.1977	5.8333
+soldier_26.ply	2.6163	4.5547
+soldier_27.ply	1.3304	1.7266
+soldier_28.ply	1.3555	1.7819
+soldier_29.ply	1.0000	1.0000
+soldier_3.ply	3.3531	6.1750
+soldier_30.ply	4.1033	7.8250
+soldier_31.ply	4.0302	7.6641
+soldier_32.ply	2.5163	4.3346
+soldier_33.ply	1.5824	2.2808
+soldier_34.ply	1.3943	1.8672
+soldier_35.ply	1.1067	1.2347
+soldier_36.ply	4.4785	8.6500
+soldier_37.ply	3.7665	7.0842
+soldier_38.ply	2.5270	4.3583
+soldier_39.ply	1.7957	2.7500
+soldier_4.ply	2.8567	5.0833
+soldier_40.ply	1.6003	2.3202
+soldier_41.ply	1.1883	1.4141
+soldier_5.ply	2.2893	3.8355
+soldier_6.ply	4.9028	9.5833
+soldier_7.ply	3.7056	6.9503
+soldier_8.ply	3.1887	5.8135
+soldier_9.ply	3.3050	6.0692
+Romanoillamp_0.ply	4.6907	9.1167
+Romanoillamp_1.ply	4.7838	9.3214
+Romanoillamp_10.ply	3.7069	6.9531
+Romanoillamp_11.ply	3.3765	6.2266
+Romanoillamp_12.ply	4.1564	7.9417
+Romanoillamp_13.ply	4.2572	8.1635
+Romanoillamp_14.ply	4.2966	8.2500
+Romanoillamp_15.ply	3.9757	7.5442
+Romanoillamp_16.ply	2.8756	5.1250
+Romanoillamp_17.ply	1.7835	2.7231
+Romanoillamp_18.ply	4.8893	9.5536
+Romanoillamp_19.ply	4.5097	8.7188
+Romanoillamp_2.ply	4.9480	9.6827
+Romanoillamp_20.ply	3.8629	7.2962
+Romanoillamp_21.ply	3.3636	6.1981
+Romanoillamp_22.ply	3.5768	6.6671
+Romanoillamp_23.ply	1.7275	2.6000
+Romanoillamp_24.ply	4.1867	8.0083
+Romanoillamp_25.ply	4.5346	8.7734
+Romanoillamp_26.ply	3.5160	6.5333
+Romanoillamp_27.ply	1.9662	3.1250
+Romanoillamp_28.ply	1.6420	2.4120
+Romanoillamp_29.ply	1.1970	1.4333
+Romanoillamp_3.ply	4.4659	8.6224
+Romanoillamp_30.ply	4.8223	9.4062
+Romanoillamp_31.ply	3.7320	7.0083
+Romanoillamp_32.ply	3.3493	6.1667
+Romanoillamp_33.ply	2.3351	3.9362
+Romanoillamp_34.ply	2.2611	3.7734
+Romanoillamp_35.ply	1.2593	1.5703
+Romanoillamp_36.ply	4.3799	8.4333
+Romanoillamp_37.ply	4.4387	8.5625
+Romanoillamp_38.ply	3.8170	7.1953
+Romanoillamp_39.ply	2.1576	3.5459
+Romanoillamp_4.ply	4.0425	7.6913
+Romanoillamp_40.ply	1.8237	2.8115
+Romanoillamp_41.ply	1.1014	1.2231
+Romanoillamp_5.ply	2.1900	3.6172
+Romanoillamp_6.ply	4.5338	8.7717
+Romanoillamp_7.ply	3.9869	7.5689
+Romanoillamp_8.ply	3.5554	6.6199
+Romanoillamp_9.ply	4.0958	7.8083
+shiva_0.ply	3.5274	6.5583
+shiva_1.ply	4.1077	7.8346
+shiva_10.ply	3.6303	6.7846
+shiva_11.ply	3.3849	6.2449
+shiva_12.ply	3.7168	6.9750
+shiva_13.ply	3.6448	6.8167
+shiva_14.ply	3.5425	6.5917
+shiva_15.ply	3.4243	6.3316
+shiva_16.ply	3.2480	5.9439
+shiva_17.ply	2.1190	3.4609
+shiva_18.ply	3.9109	7.4018
+shiva_19.ply	3.6524	6.8333
+shiva_2.ply	4.0771	7.7673
+shiva_20.ply	4.1794	7.9922
+shiva_21.ply	3.2744	6.0019
+shiva_22.ply	2.8224	5.0078
+shiva_23.ply	1.8891	2.9554
+shiva_24.ply	3.5122	6.5250
+shiva_25.ply	4.0834	7.7812
+shiva_26.ply	3.1482	5.7245
+shiva_27.ply	2.0906	3.3984
+shiva_28.ply	1.4643	2.0212
+shiva_29.ply	1.0985	1.2167
+shiva_3.ply	3.2697	5.9917
+shiva_30.ply	4.5630	8.8359
+shiva_31.ply	3.6486	6.8250
+shiva_32.ply	3.1598	5.7500
+shiva_33.ply	1.8325	2.8308
+shiva_34.ply	1.6003	2.3202
+shiva_35.ply	1.2732	1.6008
+shiva_36.ply	3.7665	7.0842
+shiva_37.ply	3.5797	6.6735
+shiva_38.ply	3.1954	5.8281
+shiva_39.ply	2.2428	3.7333
+shiva_4.ply	3.5541	6.6172
+shiva_40.ply	1.9283	3.0417
+shiva_41.ply	1.5040	2.1083
+shiva_5.ply	2.0289	3.2628
+shiva_6.ply	4.4103	8.5000
+shiva_7.ply	3.6905	6.9171
+shiva_8.ply	4.1121	7.8442
+shiva_9.ply	4.0112	7.6224
+statue_0.ply	3.6865	6.9083
+statue_1.ply	4.0159	7.6328
+statue_10.ply	3.5411	6.5885
+statue_11.ply	2.8678	5.1077
+statue_12.ply	4.1033	7.8250
+statue_13.ply	3.3341	6.1333
+statue_14.ply	3.2984	6.0548
+statue_15.ply	2.3484	3.9654
+statue_16.ply	2.1332	3.4922
+statue_17.ply	1.0853	1.1875
+statue_18.ply	3.7926	7.1417
+statue_19.ply	3.6203	6.7628
+statue_2.ply	3.3501	6.1684
+statue_20.ply	3.3339	6.1328
+statue_21.ply	2.1101	3.4413
+statue_22.ply	1.7069	2.5547
+statue_23.ply	1.0000	1.0000
+statue_24.ply	3.1888	5.8138
+statue_25.ply	3.1865	5.8087
+statue_26.ply	2.7122	4.7656
+statue_27.ply	1.4168	1.9167
+statue_28.ply	1.4883	2.0740
+statue_29.ply	1.0000	1.0000
+statue_3.ply	2.7910	4.9388
+statue_30.ply	3.6354	6.7959
+statue_31.ply	3.5122	6.5250
+statue_32.ply	3.5177	6.5370
+statue_33.ply	1.8412	2.8500
+statue_34.ply	1.2842	1.6250
+statue_35.ply	1.3138	1.6901
+statue_36.ply	4.2380	8.1212
+statue_37.ply	3.6303	6.7846
+statue_38.ply	2.9027	5.1846
+statue_39.ply	1.9911	3.1797
+statue_4.ply	1.9165	3.0156
+statue_40.ply	1.6652	2.4630
+statue_41.ply	1.2807	1.6173
+statue_5.ply	1.2060	1.4531
+statue_6.ply	3.9129	7.4062
+statue_7.ply	3.0276	5.4592
+statue_8.ply	3.4554	6.4000
+statue_9.ply	3.2277	5.8992
+ULB Unicorn_0.ply	4.2832	8.2207
+ULB Unicorn_1.ply	3.9127	7.4058
+ULB Unicorn_10.ply	3.4318	6.3481
+ULB Unicorn_11.ply	3.2486	5.9453
+ULB Unicorn_12.ply	3.8883	7.3520
+ULB Unicorn_13.ply	3.2088	5.8577
+ULB Unicorn_14.ply	3.3767	6.2269
+ULB Unicorn_15.ply	3.0578	5.5255
+ULB Unicorn_16.ply	2.1758	3.5859
+ULB Unicorn_17.ply	1.3856	1.8481
+ULB Unicorn_18.ply	3.6562	6.8417
+ULB Unicorn_19.ply	3.5328	6.5703
+ULB Unicorn_2.ply	3.7168	6.9750
+ULB Unicorn_20.ply	2.8832	5.1417
+ULB Unicorn_21.ply	2.4707	4.2344
+ULB Unicorn_22.ply	2.1166	3.4558
+ULB Unicorn_23.ply	1.1717	1.3776
+ULB Unicorn_24.ply	3.8191	7.2000
+ULB Unicorn_25.ply	3.2415	5.9297
+ULB Unicorn_26.ply	2.6518	4.6328
+ULB Unicorn_27.ply	1.4854	2.0676
+ULB Unicorn_28.ply	1.2274	1.5000
+ULB Unicorn_29.ply	1.1014	1.2231
+ULB Unicorn_3.ply	3.3197	6.1016
+ULB Unicorn_30.ply	4.0773	7.7679
+ULB Unicorn_31.ply	3.7990	7.1556
+ULB Unicorn_32.ply	2.6326	4.5906
+ULB Unicorn_33.ply	1.7318	2.6094
+ULB Unicorn_34.ply	1.3900	1.8577
+ULB Unicorn_35.ply	1.1364	1.3000
+ULB Unicorn_36.ply	4.3534	8.3750
+ULB Unicorn_37.ply	3.7584	7.0663
+ULB Unicorn_38.ply	2.8870	5.1500
+ULB Unicorn_39.ply	1.9564	3.1033
+ULB Unicorn_4.ply	2.8022	4.9635
+ULB Unicorn_40.ply	1.5456	2.2000
+ULB Unicorn_41.ply	1.1392	1.3061
+ULB Unicorn_5.ply	1.6275	2.3801
+ULB Unicorn_6.ply	4.0412	7.6885
+ULB Unicorn_7.ply	4.3499	8.3672
+ULB Unicorn_8.ply	3.5252	6.5536
+ULB Unicorn_9.ply	3.6740	6.8808
