@@ -1,0 +1,6 @@
+numpy
+scipy
+torch
+transformers>=5.5.0
+tqdm
+qwen-vl-utils
