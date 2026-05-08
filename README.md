@@ -19,6 +19,30 @@ sha256sum -c ../CHECKPOINT_210_SHA256SUMS_1GB.txt
 cat model.safetensors.part-* > model.safetensors
 ```
 
+Environment:
+
+- Tested on Linux with an NVIDIA GPU and CUDA-enabled PyTorch.
+- Python `3.10` is recommended.
+- `eval_pcqa.py` expects a Qwen3.5-capable `transformers` build and uses `flash_attention_2` during model loading.
+
+Install:
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+Minimum tested packages:
+
+- `torch` with CUDA support
+- `transformers>=5.5.0`
+- `qwen-vl-utils`
+- `numpy`
+- `scipy`
+- `tqdm`
+
 Fold note:
 
 - `SJTU-PCQA` uses the public 9-fold split protocol bundled in this package.
