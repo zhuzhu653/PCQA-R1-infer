@@ -15,9 +15,15 @@ If the checkpoint is distributed as split release assets, download all
 
 ```bash
 cd checkpoint-210
-sha256sum -c ../CHECKPOINT_210_SHA256SUMS.txt
+sha256sum -c ../CHECKPOINT_210_SHA256SUMS_1GB.txt
 cat model.safetensors.part-* > model.safetensors
 ```
+
+Fold note:
+
+- `SJTU-PCQA` uses 9 official folds.
+- `WPC` uses 5 official folds.
+- `--fold 0` is a convenience all-set label file bundled for reviewer evaluation; it is not an additional official fold.
 
 Required input layout:
 
