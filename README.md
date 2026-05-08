@@ -21,9 +21,9 @@ cat model.safetensors.part-* > model.safetensors
 
 Fold note:
 
-- `SJTU-PCQA` uses 9 official folds.
-- `WPC` uses 5 official folds.
-- `--fold 0` is a convenience all-set label file bundled for reviewer evaluation; it is not an additional official fold.
+- `SJTU-PCQA` uses the public 9-fold split protocol bundled in this package.
+- `WPC` uses the public 5-fold split protocol bundled in this package.
+- `--fold 0` is a convenience all-set label file bundled for reviewer evaluation; it is not an additional benchmark split.
 
 Required input layout:
 
@@ -48,5 +48,3 @@ python eval_pcqa.py \
 	--image_folder "$DATA_BASE/SJTU-PCQA_maps/6view" \
 	--output eval_sjtu_fold1_color_checkpoint-210.json
 ```
-
-Optional WPC case identifiers are listed in `examples/reviewer_cases_wpc.json`.
