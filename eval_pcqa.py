@@ -227,7 +227,7 @@ def inference_pcqa(samples, model, processor, device, batch_size=2):
             score = parse_score(output)
             parse_ok = score is not None
             if score is None:
-                print(f"  [WARN] 无法解析分数: {ply_stem} → {output[:150]}")
+                print(f"  [WARN] Could not parse score: {ply_stem} -> {output[:150]}")
                 score = 3.0
             output_for_pattern = normalize_output_for_format(batch_output_for_pattern[idx])
             results[ply_stem] = {
@@ -280,7 +280,7 @@ def summarize_pcqa_predictions(dataset_name, fold, mode, labels, pred_dict, thro
             )
 
     if len(gt_scores) < 5:
-        print(f"  [SKIP] 可用于指标计算的样本太少: {len(gt_scores)}")
+        print(f"  [SKIP] Too few samples available for metric computation: {len(gt_scores)}")
         return None
 
     gt_scores = np.array(gt_scores)
@@ -346,7 +346,7 @@ def merge_shard_results(dataset_name, fold, mode, shard_paths):
     """Merge eval shard JSON files and recompute metrics on the full target set."""
     label_file = resolve_label_file(dataset_name, fold)
     if not os.path.exists(label_file):
-        print(f"  [SKIP] 标签文件不存在: {label_file}")
+        print(f"  [SKIP] Label file not found: {label_file}")
         return None
 
     labels = load_test_labels(label_file)
@@ -357,8 +357,8 @@ def merge_shard_results(dataset_name, fold, mode, shard_paths):
     total_completion_tokens = 0
 
     print(f"\n{'='*60}")
-    print(f"合并分片评测: {dataset_name} fold-{fold} ({mode})")
-    print(f"  标签: {label_file}")
+    print(f"Merging shard evaluations: {dataset_name} fold-{fold} ({mode})")
+    print(f"  Labels: {label_file}")
     print(f"  Shards: {len(shard_paths)}")
     print(f"{'='*60}")
 
@@ -399,7 +399,10 @@ def merge_shard_results(dataset_name, fold, mode, shard_paths):
     label_stems = [ply_stem for ply_stem, _ in labels]
     missing_after_merge = [ply_stem for ply_stem in label_stems if ply_stem not in merged_pred]
     if missing_after_merge:
-        print(f"  [WARN] 合并后仍缺少 {len(missing_after_merge)} 个标签样本，示例: {missing_after_merge[:3]}")
+        print(
+            f"  [WARN] Still missing {len(missing_after_merge)} labeled samples after merge, "
+            f"examples: {missing_after_merge[:3]}"
+        )
 
     parallel_generation_seconds = max(shard_generation_seconds) if shard_generation_seconds else None
     serial_generation_seconds_sum = sum(shard_generation_seconds) if shard_generation_seconds else None
@@ -424,64 +427,64 @@ def save_result_json(model_path, result, output_path):
     os.makedirs(os.path.dirname(output_path) or ".", exist_ok=True)
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump({"model": model_path, "result": result}, f, indent=2, ensure_ascii=False)
-    print(f"\n结果已保存到: {output_path}")
+    print(f"\nSaved results to: {output_path}")
 
 
 def evaluate_pcqa(dataset_name, fold, mode, image_folder_override,
                   model, processor, device, batch_size=2,
                   shard_index=0, num_shards=1):
-    """评估单个 PCQA 数据集/fold"""
+    """Evaluate a single PCQA dataset/fold."""
     config = DATASET_CONFIG[dataset_name]
 
-    # 确定标签文件
+    # Resolve the label file.
     label_file = resolve_label_file(dataset_name, fold)
 
     image_dir = image_folder_override or config["image_dir"]
 
     print(f"\n{'='*60}")
-    print(f"评估: {dataset_name} fold-{fold} ({mode})")
-    print(f"  标签: {label_file}")
-    print(f"  图片: {image_dir}")
+    print(f"Evaluating: {dataset_name} fold-{fold} ({mode})")
+    print(f"  Labels: {label_file}")
+    print(f"  Images: {image_dir}")
     print(f"{'='*60}")
 
     if not os.path.exists(label_file):
-        print(f"  [SKIP] 标签文件不存在: {label_file}")
+        print(f"  [SKIP] Label file not found: {label_file}")
         return None
 
     labels = load_test_labels(label_file)
-    print(f"  标签数量: {len(labels)}")
+    print(f"  Number of labels: {len(labels)}")
 
-    # 构建样本列表
+    # Build the sample list.
     samples = []
     skipped = 0
     for ply_stem, mos in labels:
         view_paths = get_view_paths(ply_stem, image_dir)
-        # 检查所有视角图是否存在
+        # Check that all six rendered views exist.
         missing = [p for p in view_paths if not os.path.exists(p)]
         if missing:
             skipped += 1
             if skipped <= 3:
-                print(f"  [WARN] 缺失图片: {ply_stem} ({len(missing)} files)")
+                print(f"  [WARN] Missing images: {ply_stem} ({len(missing)} files)")
             continue
         samples.append((ply_stem, view_paths))
 
     if skipped > 0:
-        print(f"  [WARN] 跳过 {skipped} 个样本（图片缺失）")
-    print(f"  有效样本: {len(samples)}")
+        print(f"  [WARN] Skipped {skipped} samples due to missing images")
+    print(f"  Valid samples: {len(samples)}")
 
     full_valid_samples = len(samples)
     if num_shards > 1:
         samples = shard_samples(samples, shard_index, num_shards)
         print(
-            f"  分片: shard {shard_index + 1}/{num_shards}, "
-            f"当前分片有效样本 {len(samples)} / {full_valid_samples}"
+            f"  Shard: {shard_index + 1}/{num_shards}, "
+            f"valid samples in this shard {len(samples)} / {full_valid_samples}"
         )
 
     if len(samples) < 5:
-        print(f"  [SKIP] 有效样本太少")
+        print(f"  [SKIP] Too few valid samples")
         return None
 
-    # 推理
+    # Run inference.
     pred_dict, throughput = inference_pcqa(samples, model, processor, device, batch_size)
 
     result = summarize_pcqa_predictions(dataset_name, fold, mode, labels, pred_dict, throughput=throughput)
@@ -496,25 +499,25 @@ def evaluate_pcqa(dataset_name, fold, mode, image_folder_override,
 
 
 def main():
-    parser = argparse.ArgumentParser(description="PC_RL PCQA 评估（6-view 多图推理）")
-    parser.add_argument("--model_path", type=str, required=True, help="模型 checkpoint 路径")
+    parser = argparse.ArgumentParser(description="PCQA-R1 evaluation for deterministic 6-view inference")
+    parser.add_argument("--model_path", type=str, required=True, help="Path to the model checkpoint")
     parser.add_argument("--dataset", type=str, required=True, choices=list(DATASET_CONFIG.keys()),
-                        help="数据集名")
-    parser.add_argument("--fold", type=int, default=1, help="fold 编号 (0=全集)")
+                        help="Dataset name")
+    parser.add_argument("--fold", type=int, default=1, help="Fold index (0 = all-set labels)")
     parser.add_argument("--mode", type=str, default="color", choices=["color"],
-                        help="输入模式；匿名发布仅支持 6 张彩色渲染图")
-    parser.add_argument("--image_folder", type=str, default=None, help="覆盖默认图片目录")
+                        help="Input mode; the anonymous release only supports six color-rendered views")
+    parser.add_argument("--image_folder", type=str, default=None, help="Override the default image directory")
     parser.add_argument("--max_pixels", type=int, default=401408,
-                        help="最大像素数，控制图像 resize (默认 401408≈632²，与训练脚本保持一致)")
-    parser.add_argument("--batch_size", type=int, default=2, help="推理 batch size，默认固定为 2 以统一评估口径")
-    parser.add_argument("--device", type=str, default="cuda:0", help="推理设备")
-    parser.add_argument("--output", type=str, default=None, help="结果 JSON 路径")
+                        help="Maximum pixel budget for image resizing (default: 401408 ~= 632^2, matching training)")
+    parser.add_argument("--batch_size", type=int, default=2, help="Inference batch size (default: 2 for a stable evaluation protocol)")
+    parser.add_argument("--device", type=str, default="cuda:0", help="Inference device")
+    parser.add_argument("--output", type=str, default=None, help="Output JSON path")
     parser.add_argument("--shard_index", type=int, default=0,
-                        help="多卡分片评测：当前 shard 序号，范围 [0, num_shards)。默认 0")
+                        help="Multi-GPU sharded evaluation: current shard index in [0, num_shards). Default: 0")
     parser.add_argument("--num_shards", type=int, default=1,
-                        help="多卡分片评测：总 shard 数。默认 1 表示不分片")
+                        help="Multi-GPU sharded evaluation: total number of shards. Default: 1 (no sharding)")
     parser.add_argument("--merge_shards", type=str, default=None,
-                        help="只合并 shard JSON 并重算指标，多个路径用 ':' 分隔；不会加载模型")
+                        help="Only merge shard JSON files and recompute metrics; separate multiple paths with ':'. No model will be loaded")
     args = parser.parse_args()
 
     if args.merge_shards:
@@ -528,7 +531,7 @@ def main():
             save_result_json(args.model_path, result, output_path)
         return
 
-    print(f"加载模型: {args.model_path}")
+    print(f"Loading model: {args.model_path}")
     device = torch.device(args.device)
 
     config_path = os.path.join(args.model_path, "config.json")
@@ -542,7 +545,7 @@ def main():
             raise ValueError(f"Anonymous release only supports Qwen3.5 checkpoints, got model_type={model_type!r}")
     if model_cls is None:
         raise ImportError("Qwen3.5 requires transformers>=5.5.0")
-    print(f"  检测到 Qwen3.5 模型")
+    print(f"  Detected a Qwen3.5 model")
 
     model = model_cls.from_pretrained(
         args.model_path,
@@ -563,7 +566,7 @@ def main():
             ip.size["longest_edge"] = EVAL_MAX_PIXELS
             ip.size["shortest_edge"] = 3136
         print(f"  image_processor.max_pixels = {EVAL_MAX_PIXELS}")
-    print("模型加载完成")
+    print("Model loading complete")
 
     result = evaluate_pcqa(
         args.dataset, args.fold, args.mode,
@@ -574,7 +577,7 @@ def main():
     )
 
     if result:
-        # 保存结果
+        # Save results.
         ckpt_name = Path(args.model_path).name
         output_path = args.output or f"eval_pcqa_{args.dataset}_fold{args.fold}_{args.mode}_{ckpt_name}.json"
         save_result_json(args.model_path, result, output_path)
