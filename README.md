@@ -10,14 +10,14 @@ anonymous PCQA-R1 checkpoint.
 
 The checkpoint directory should contain the standard Hugging Face files,
 including `config.json`, tokenizer/processor files, and `model.safetensors`.
-If the checkpoint is distributed as split release assets, download all
-`model.safetensors.part-*` files into the `checkpoint-210` directory and run:
+Download the reviewer checkpoint from Hugging Face:
 
-```bash
-cd checkpoint-210
-sha256sum -c ../CHECKPOINT_210_SHA256SUMS_1GB.txt
-cat model.safetensors.part-* > model.safetensors
+```text
+https://huggingface.co/jiujiu666/PCQA-R1-sjtu
 ```
+
+Place the downloaded files in the `checkpoint-210` directory, or point
+`--model_path` directly to the local Hugging Face snapshot directory.
 
 Environment:
 
